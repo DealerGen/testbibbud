@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #4c1d95 0%, #312e81 100%);
+  --card-gradient: linear-gradient(135deg, rgba(76, 29, 149, 0.1) 0%, rgba(49, 46, 129, 0.1) 100%);
+  --transition-speed: 0.2s;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--primary-gradient);
+  color: #ffffff;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Card styles */
+.card {
+  @apply bg-opacity-10 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-200;
+  background: var(--card-gradient);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition-all duration-200;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Input styles */
+.input {
+  @apply bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2 transition-all duration-200;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.input:focus {
+  @apply outline-none ring-2 ring-purple-500;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Layout utilities */
+.page-container {
+  @apply min-h-screen p-6;
+  background: var(--primary-gradient);
+}
+
+.content-container {
+  @apply max-w-7xl mx-auto;
+}

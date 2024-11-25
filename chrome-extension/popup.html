@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BidBuddy Helper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BidBuddy Helper</h1>
+    <div class="input-group">
+      <input type="text" id="registration" placeholder="Enter registration (e.g., YH22VFD)" maxlength="7">
+      <button id="submit">Get Valuation</button>
+    </div>
+    <div id="result" class="hidden">
+      <h2>Retail Valuation</h2>
+      <p id="makeModel" class="make-model"></p>
+      <p id="valuation" class="valuation"></p>
+    </div>
+    <div id="error" class="hidden">
+      <p>Vehicle not found or an error occurred.</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "BidBuddy Helper",
+  "version": "1.0",
+  "description": "Retrieve vehicle valuations from BidBuddy",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://resplendent-cat-e1c9a9.netlify.app/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

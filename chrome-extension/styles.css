@@ -1,0 +1,101 @@
+body {
+  font-family: 'Inter', sans-serif;
+  width: 300px;
+  padding: 16px;
+  background: linear-gradient(to right, #7e22ce, #3730a3);
+  color: white;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+button:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+}
+
+#result, #error {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+#result h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.make-model {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #93c5fd;
+}
+
+.valuation {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
